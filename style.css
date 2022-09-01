@@ -34,7 +34,7 @@
   padding: 25px;
   gap: 25px;
   width: 335px;
-  height: 350px;
+  height: 352px;
   background-color: var(--dark-blue);
   border-radius: 12px;
   color: var(--light-grey);
@@ -42,7 +42,8 @@
   font-weight: 400;
 }
 
-.card__title {
+.card__title,
+.thanks__title {
   color: white;
   font-size: 12px;
   font-weight: 700;
@@ -95,8 +96,17 @@
   color: white;
   background-color: var(--light-grey);
 }
+.thanks__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+}
 
-/* MEDIA QUERIES */
-
-@media (max-width: 375px) {
+.thanks__rating {
+  color: var(--orange);
+  background-color: hsl(213, 19%, 22%);
+  padding: 8px 15px;
+  border-radius: 500px;
 }

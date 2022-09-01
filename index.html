@@ -44,8 +44,17 @@
     </div>
     <!-- thanks card -->
     <div class="card card--thanks">
-      You selected out of 5 Thank you! We appreciate you taking the time to give
-      a rating. If you ever need more support, don’t hesitate to get in touch!
+      <div class="thanks__container">
+        <div class="thanks-img">
+          <img src="images/illustration-thank-you.svg" alt="thank you img" />
+        </div>
+        <div class="thanks__rating"></div>
+        <div class="thanks__title"><h1>Thank you!</h1></div>
+        <div class="thanks__text">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </div>
+      </div>
     </div>
   </body>
   <script defer>
@@ -55,6 +64,7 @@
     btn.addEventListener('click', function () {
       document.querySelector('.card--thanks').style.display = 'initial';
       document.querySelector('.card--rate').style.display = 'none';
+      $('.thanks__rating').text(`You selected ${number || 0} out of 5`);
     });
 
     $(document).ready(function () {
